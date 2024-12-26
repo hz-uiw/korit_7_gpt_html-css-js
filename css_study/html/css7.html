@@ -20,6 +20,20 @@
         div > h1:nth-of-type(2n -1 ) {
             background-color: brown;
         }
+
+        div > div > .or {
+            background-color: #ffffff;
+
+            &::before,
+            &::after {
+                content: "";
+                display: inline-block;
+                margin: 0px 5px;
+                border-top: 1px solid #222222;
+                width: 100px;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -35,6 +49,9 @@
         <p>텍스트4</p>
         <p>텍스트5</p>
         <input type="text">
+        <div>
+            <span class="or">또는</span>
+        </div>
     </div>
 </body>
 </html>
