@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css6</title>
+    <style>
+        /* .box1 > div > div {  자식의 자식
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border: 10px solid #222222;
+        } */
+        .box1 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border: 10px solid #222222;
+
+            & > div > div {
+                width: 50px;
+                height: 50px;
+                background-color: #ffffff;
+            }
+        }
+        .box1 ~ div > div > div { /* .box1 + div */
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            border: 10px solid #222222;
+        }
+
+        .checkbox-group {
+            box-sizing: border-box;
+            border: 1px solid #222222;
+            padding: 20px;
+
+            & input[type="checkbox"] {
+                display: none;
+            }
+
+            & input[type="checkbox"] + label {
+                width: 35px;
+                height: 35px;
+                border: 2px solid #222222;
+                box-sizing: border-box;
+                display: inline-block;
+                padding: 5px;
+                background-clip: content-box;
+            }
+
+            & input[type="checkbox"]:checked + label {
+                background-color: red;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div>
+            <div></div>
+        </div>
+    </div>
+    <div>
+        <div>
+            <div></div>
+        </div>
+    </div>
+
+    <div class="checkbox-group">
+        <input type="checkbox" id="chk1">
+        <label for="chk1"></label>
+    </div>
+</body>
+</html>
