@@ -1,5 +1,7 @@
 footer {
+    width: 100%;
     padding: 0 16px;
+    box-sizing: border-box;
 }
 
 .footer-wrap {
@@ -9,8 +11,10 @@ footer {
 .footer-container1 {
     display: flex;
     justify-content: center;
+    margin-top: 24px;
 
     & > a {
+        box-sizing: border-box;
         margin: 0 8px 12px;
         color: #8a8a8a;
         font-size: 12px;
@@ -20,11 +24,15 @@ footer {
 .footer-container2 {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin: 12px 0;
 
     & > a, .footer-copyright {
-        margin: 0 8px 12px;
         color: #8a8a8a;
         font-size: 12px;
+    }
+
+    & > .footer-copyright {
+        margin-left: 16px;
     }
 }
