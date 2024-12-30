@@ -1,13 +1,13 @@
 // 배열
 
-const numbers = [1,2,3,4,5,6,7,8,9];
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 console.log(numbers);
 
 for(let i = 0; i < numbers.length; i++) {
     console.log(numbers[i]);
 }
 
-for(let num of numbers) {
+for(let num of numbers) {   // 향상된 for문에서 of 사용
     console.log(num);
 }
 
