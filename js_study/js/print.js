@@ -3,4 +3,4 @@
 console.log("hello js");
 console.log("이름: 권민창");
 console.log("나이: 25");
-console.error("오류 출력!!!")
+console.error("오류 출력!!!");
