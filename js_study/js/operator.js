@@ -38,11 +38,13 @@ console.log(1 !== "1"); // 타입, 값 검사
             좌항(anything1) === null || 좌항(anything1) === undefined => 우항(anything2)
             좌항(anything1) !== null && 좌항(anything1) !== undefined => 좌항(anything1)
 */
-console.log(1 === 1 || "권민창");
-console.log(1 !== 1 || "권민창");
-console.log(1 === 1 && "권민창");
-console.log(1 !== 1 && "권민창");
+// 단축평가
+console.log(1 === 1 || "권민창1");  // or 연산자 -> true면 true
+console.log(1 !== 1 || "권민창2");  // or 연산자 -> false면 anything 반환
+console.log(1 === 1 && "권민창3");  // and 연산자 -> true면 anything 반환
+console.log(1 !== 1 && "권민창4");  // and 연산자 -> false면 false 반환
 
+// null 병합 연산
 console.log(null ?? "권민찬");
 console.log("권민창" ?? "권민찬");
 
