@@ -1,6 +1,4 @@
-/*
-    JavaScript -> 인터프리터, 스크립트 언어
-*/
+// JavaScript -> 인터프리터, 스크립트 언어
 
 console.log("hello js");
 console.log("이름: 권민창");
