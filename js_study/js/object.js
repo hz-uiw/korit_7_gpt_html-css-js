@@ -53,3 +53,19 @@ console.log(userJson);
 // JSON -> Object
 const convertUser = JSON.parse(userJson);
 console.log(convertUser);
+
+const student = {
+    name: "권민창",
+    age: 25,
+    address: "창원시 성산구",
+}
+
+const key = "age";
+const value = 26;
+const student2 = {
+    ...student,
+    name: "권민찬",
+    [key]: value,
+}
+
+console.log(student2);
