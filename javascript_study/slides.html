@@ -16,19 +16,19 @@
             width: 1200px;
             height: 400px;
             overflow: hidden;
-            
+
             & > img {
                 width: 100%;
             }
-            
+
             & > .prev-button,
             & > .next-button {
                 position: absolute;
                 transform: translateY(-50%);
                 top: 50%;
-                background-color: transparent;
                 border: none;
                 padding: 10px;
+                background-color: transparent;
                 cursor: pointer;
 
                 & > svg {
@@ -39,7 +39,7 @@
             & > .prev-button {
                 left: 50px;
             }
-            
+
             & > .next-button {
                 right: 50px;
             }
@@ -47,8 +47,8 @@
     </style>
 </head>
 <body>
-    <div id="fixed">
-        <input type="checkbox">
+    <div>
+        <input type="checkbox" id="fixed">
         <label for="">고정</label>
     </div>
     <div class="slide">
@@ -87,8 +87,8 @@
 
         function handleNextOnClick() {
             const fixedCheckBox = document.querySelector("#fixed");
-
-            if(currentIndex < urlList.length -1) {
+            
+            if(currentIndex < urlList.length - 1) {
                 currentIndex++;
             } else {
                 if(fixedCheckBox.checked) {
