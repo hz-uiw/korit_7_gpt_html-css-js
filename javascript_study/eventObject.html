@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eventObject</title>
+</head>
+<body>
+    <input type="text" class="text-input">
+    <input type="text" class="text-input2">
+    <button class="submit-button">확인</button>
+    <script>
+        let data = {
+            text1: "",
+            text2: "",
+        }
+        
+                function handleInputOnKeyDown(e) {
+                    if(e.keyCode !== 13) {
+                        return;
+                    }
+                    // const nextInput = document.querySelector("& + input");
+                    const nextInput = document.querySelector(".text-input2");
+                    nextInput.focus();
+                }
+                
+                function handleInputOnKeyDown2(e) {
+                    if(e.keyCode !== 13) {
+                        return;
+                    }
+                    const submitButton = document.querySelector(".submit-button");
+                    submitButton.click();
+                }
+        
+        function handleInputOnchange() {
+            const inputElemnet = document.querySelector(".text-input");
+            data = {
+                ...data,
+                text1: inputElemnet.value,
+            }
+        }
+        
+        function handleInputOnchange2(e) {
+            data = {
+                ...data,
+                text2: e.target.value,
+            }
+        }
+
+        function handleSubmitOnClick(e) {
+            console.log(e);
+            // if(e.ctrlKey && e.altKey) {
+            //     console.log(data);
+            // }
+            console.log(data);
+        }
+
+        window.onload = () => {
+            const textInputElemnet = document.querySelector(".text-input");
+            const textInputElemnet2 = document.querySelector(".text-input2");
+            const submitButtonElement = document.querySelector(".submit-button");
+
+            textInputElemnet.onkeyup = handleInputOnchange;
+            textInputElemnet2.onkeyup = handleInputOnchange2;
+            textInputElemnet.onkeydown = handleInputOnKeyDown;
+            textInputElemnet2.onkeydown = handleInputOnKeyDown2;
+            submitButtonElement.onclick = handleSubmitOnClick;
+        }
+    </script>
+</body>
+</html>
