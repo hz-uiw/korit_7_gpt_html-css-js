@@ -15,22 +15,22 @@
             text2: "",
         }
         
-                function handleInputOnKeyDown(e) {
-                    if(e.keyCode !== 13) {
-                        return;
-                    }
-                    // const nextInput = document.querySelector("& + input");
-                    const nextInput = document.querySelector(".text-input2");
-                    nextInput.focus();
-                }
-                
-                function handleInputOnKeyDown2(e) {
-                    if(e.keyCode !== 13) {
-                        return;
-                    }
-                    const submitButton = document.querySelector(".submit-button");
-                    submitButton.click();
-                }
+        function handleInputOnKeyDown(e) {
+            if(e.keyCode !== 13) {
+                return;
+            }
+            // const nextInput = document.querySelector("& + input");
+            const nextInput = document.querySelector(".text-input2");
+            nextInput.focus();
+        }
+        
+        function handleInputOnKeyDown2(e) {
+            if(e.keyCode !== 13) {
+                return;
+            }
+            const submitButton = document.querySelector(".submit-button");
+            submitButton.click();
+        }
         
         function handleInputOnchange() {
             const inputElemnet = document.querySelector(".text-input");
