@@ -16,12 +16,16 @@
         }
         
         function handleInputOnKeyDown(e) {
-            if(e.keyCode !== 13) {
-                return;
+            // if(e.keyCode !== 13) {
+            //     return;
+            // }
+            // // const nextInput = document.querySelector("& + input");
+            // const nextInput = document.querySelector(".text-input2");
+            // nextInput.focus();
+            if(e.keyCode === 13) {
+                const nextInput = document.querySelector(".text-input2");
+                nextInput.focus();
             }
-            // const nextInput = document.querySelector("& + input");
-            const nextInput = document.querySelector(".text-input2");
-            nextInput.focus();
         }
         
         function handleInputOnKeyDown2(e) {
