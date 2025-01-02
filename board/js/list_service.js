@@ -3,8 +3,8 @@ function loadList() {
     ? JSON.parse(localStorage.getItem("boardDatas")) : [];
 
     const boardList = document.querySelector(".board-list-container");
-    boardList.innerHTML = boardDatas.map(data => 
-        `<li class="board-box">
+    boardList.innerHTML = boardDatas.map(data => `
+        <li class="board-box">
             <header class="board-header">
                 <h1>${data.title}(${data.writer})</h1>
             </header>
@@ -12,5 +12,7 @@ function loadList() {
                 <pre>${data.content}</pre>
             </main>
         </li>
-        `).join("");
+    `).join("");
 }
+
+loadList();

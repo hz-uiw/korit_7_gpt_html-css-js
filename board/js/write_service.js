@@ -15,8 +15,8 @@ function setInputsEvent() {
 }
 
 function setButtonEvent() {
-    const submitButoon = document.querySelector(".write-submit-button");
-    submitButoon.onclick = handleSubmitOnClick;
+    const submitButton = document.querySelector(".write-submit-button");
+    submitButton.onclick = handleSubmitOnClick;
 }
 
 function handleSubmitOnClick() {
@@ -32,7 +32,8 @@ function handleBoardInputOnChang(e) {
 }
 
 function saveBoard() {
-    let boardDatas = !!localStorage.getItem("boardDatas") ? JSON.parse(localStorage.getItem("boardDatas")) : [];
+    let boardDatas = !!localStorage.getItem("boardDatas") 
+    ? JSON.parse(localStorage.getItem("boardDatas")) : [];
 
     if(boardDatas.length > 0) {
         boardInputDatas.id = boardDatas[boardDatas.length - 1].id + 1;
