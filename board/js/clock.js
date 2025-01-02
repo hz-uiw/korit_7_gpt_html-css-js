@@ -1,5 +1,5 @@
 function clockRun() {
-    const phoneClock = document.querySelector(".phon-clock");
+    const phoneClock = document.querySelector(".phone-clock");
     setInterval(() => {
         const now = new Date();
         const nowHours = now.getHours();
