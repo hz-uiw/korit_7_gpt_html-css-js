@@ -48,13 +48,17 @@
     & > .phone-clock {
         font-weight: 600;
         color: #ffffff;
+        cursor: default;
     }
 }
 
 .phone-header-right {
     & svg {
         width: 20px;
+        height: 20px;
         margin-left: 3px;
+        fill: #eeeeee;
+        stroke: #eeeeee;;
 
         & path {
             fill: #fafafa;
@@ -63,6 +67,8 @@
 }
 
 .main-layout {
+    display: flex;
+    flex-direction: column;
     box-sizing: border-box;
     padding-top: 60px;
     width: 100%;
