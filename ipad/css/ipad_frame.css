@@ -25,6 +25,7 @@
 }
 
 .pad-header-left,
+.pad-header-middle,
 .pad-header-right {
     display: flex;
     justify-content: center;
@@ -34,18 +35,20 @@
     height: 100%;
 }
 
-.pad-header-left {
+.pad-header-middle {
     & > .clock {
+        font-size: 20px;
         font-weight: 600;
         color: #222222;
         cursor: default;
     }
 }
 
+.pad-header-left,
 .pad-header-right {
     & svg {
-        width: 20px;
-        height: 20px;
+        width: 25px;
+        height: 25px;
         margin-left: 3px;
         fill: #222222;
         stroke: #222222;;
