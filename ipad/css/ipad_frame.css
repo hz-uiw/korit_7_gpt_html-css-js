@@ -9,10 +9,9 @@
 .container {
     width: 768px;
     height: 1024px;
-    border: 3px solid #afafaf;
+    border: 5px solid #000000;
     border-radius: 10px;
     box-sizing: border-box;
-    box-shadow: 0 0 2px 5px #000000 inset;
     overflow: hidden;
 }
 
