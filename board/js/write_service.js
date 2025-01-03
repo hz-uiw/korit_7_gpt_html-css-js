@@ -9,9 +9,9 @@ function setInputsEvent() {
     const titleInput = document.querySelector(".main-article > input:nth-of-type(1)");
     const contentInput = document.querySelector(".main-article > textarea");
     const writerInput = document.querySelector(".main-article > input:nth-of-type(2)");
-    titleInput.onkeyup = handleBoardInputOnChang;
-    contentInput.onkeyup = handleBoardInputOnChang;
-    writerInput.onkeyup = handleBoardInputOnChang;
+    titleInput.onkeyup = handleBoardInputOnChange;
+    contentInput.onkeyup = handleBoardInputOnChange;
+    writerInput.onkeyup = handleBoardInputOnChange;
 }
 
 function setButtonEvent() {
@@ -24,7 +24,7 @@ function handleSubmitOnClick() {
     clear();
 }
 
-function handleBoardInputOnChang(e) {
+function handleBoardInputOnChange(e) {
     boardInputDatas = {
         ...boardInputDatas,
         [e.target.name]: e.target.value,
